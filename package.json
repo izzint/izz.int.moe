@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "izzint",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
