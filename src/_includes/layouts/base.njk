@@ -1,0 +1,50 @@
+---
+title: izzint
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>izz - {{ title }}</title>
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="izz - {{ title }}">
+        <meta property="og:description" content="waoh">
+        <meta property="og:url" content="https://izz.nekoweb.org/">
+        <meta property="og:image" content="img/favicon.gif">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/gif" href="img/favicon.gif">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <link href="https://github.com/izzint" rel="me">
+        <div class="container">
+            <div class="main_window"> 
+                <div class="banner">
+                    <img alt="izz.nekoweb.org logo" src="/img/logo.png">
+                </div>
+                <div class="main-content">
+                    {{ content | safe }}
+                </div>
+                <div class="sidebar-left">
+                    <button onclick="location.href='/'" type="button">home</button>
+                    <button onclick="location.href='tools.html'" type="button">portfolio</button>
+                    <button onclick="location.href='guestbook.html'" type="button">guestbook</button>
+                    <button onclick="location.href='about.html'" type="button">about</button>
+                    <button onclick="location.href='extras.html'" type="button">extras</button>
+                </div>
+                <div class="sidebar-right">
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=izz" defer></script>
+                </div>
+                <div class="buttons">
+                    <a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button1.gif"></a>
+                    <a href="https://izz.nekoweb.org"><img alt="izzint" src="https://izz.nekoweb.org/img/button.png"></a>
+                </div>
+                <div class="footer" id="footer"></div>
+                <div class="listening-to" id="listening-to"></div>
+            </div>
+        </div>
+        <script src="/js/lastfm.js" async></script>
+        <script src="/js/nekostats.js" async></script>
+    </body>
+</html>
