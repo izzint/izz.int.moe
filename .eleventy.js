@@ -5,4 +5,5 @@ export default async function(eleventyConifg) {
             output: "site"
         }
     };
+    eleventyConifg.addPassthroughCopy("static/css");
 };
