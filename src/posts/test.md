@@ -1,9 +1,7 @@
 ---
 layout: layouts/base.njk
-date: git Last Modified
 title: test
+date: git Last Modified
 ---
-## test
-test
 
-testing
+post
