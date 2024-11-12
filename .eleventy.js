@@ -1,13 +1,13 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 export default async function(eleventyConifg) {
-    eleventyConifg.addPassthroughCopy("static/css");
+    eleventyConifg.addPassthroughCopy("src/static/css");
 
     eleventyConifg.addPlugin(feedPlugin, {
         type: "rss",
         outputPath: "/feed.xml",
         collection: {
-            name: "posts",
+            name: "post",
             limit: 15
         },
         metadata: {
