@@ -1,13 +1,14 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 export default async function(eleventyConifg) {
-    eleventyConifg.addPassthroughCopy("src/static/css");
+    // i could improve this a good bit
+    eleventyConifg.addPassthroughCopy({"src/static": "/" });
 
     eleventyConifg.addPlugin(feedPlugin, {
         type: "rss",
         outputPath: "/feed.xml",
         collection: {
-            name: "post",
+            name: "posts",
             limit: 15
         },
         metadata: {
@@ -19,6 +20,10 @@ export default async function(eleventyConifg) {
                 name: "izzint"
             }
         }
+    });
+
+    eleventyConifg.addCollection('posts', collection => {
+        return collection.getFilteredByGlob('src/posts/*.md')
     });
 
     return {
