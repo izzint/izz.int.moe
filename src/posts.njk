@@ -6,6 +6,6 @@ date: git Last Modified
 <h3>blog</h3><hr>
 <ul>
 {%- for post in collections.posts -%}
-  <li>{{ post.data.title }}</li>
+  <li>{{ post.data.title }} {{ post.date }} <br> {{ post.data.description }}</li>
 {%- endfor -%}
 </ul>

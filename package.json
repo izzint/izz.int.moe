@@ -4,7 +4,9 @@
   "description": "the new new izz site",
   "main": "index.js",
   "scripts": {
-    "serve": "npx @11ty/eleventy --serve"
+    "serve:eleventy": "npx @11ty/eleventy --serve",
+    "serve:sass": "npx sass sass:site/css --watch",
+    "start": "npm run serve:eleventy & npm run serve:sass"
   },
   "keywords": [],
   "author": "izzint",
