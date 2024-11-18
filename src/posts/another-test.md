@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/post.njk
 title: about blogging,
 description: its cool again!
 date: git Last Modified
