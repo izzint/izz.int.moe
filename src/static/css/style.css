@@ -108,9 +108,10 @@ button:hover {
 }
 
 .goodie:hover {
-    padding: 9px;
     background: linear-gradient(to bottom, #ced7e3 0%,#95a0aa 36%,#4a5e6a 100%);
-    box-shadow: 5px 5px 10px #080808;
+    box-shadow: 3px 3px 10px #080808;
+    transform: translate3d(0.4ch, 0.4ch, 0.2ch);
+    
 }
 
 .goodie img {
