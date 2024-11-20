@@ -106,6 +106,10 @@ button:hover {
     box-shadow: 3px 3px 5px #080808;
 }
 
+.goodie:hover {
+    margin: 1px;
+}
+
 .goodie img {
     margin-right: auto;
     height: 10em;
