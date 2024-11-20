@@ -104,10 +104,13 @@ button:hover {
     border: groove 2px rgb(95, 95, 95);
     border-radius: 10px;
     box-shadow: 3px 3px 5px #080808;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .goodie:hover {
-    margin: 1px;
+    padding: 9px;
+    background: linear-gradient(to bottom, #ced7e3 0%,#95a0aa 36%,#4a5e6a 100%);
+    box-shadow: 5px 5px 10px #080808;
 }
 
 .goodie img {
