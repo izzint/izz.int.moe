@@ -1,8 +1,12 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { DateTime } from "luxon";
 
 export default async function(eleventyConifg) {
-    // i could improve this a good bit
     eleventyConifg.addPassthroughCopy({"src/static": "/" });
+
+    eleventyConifg.addFilter("shortDate", (date) => {
+        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_FULL);
+    });
 
     eleventyConifg.addPlugin(feedPlugin, {
         type: "rss",

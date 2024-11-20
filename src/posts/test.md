@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 title: test
+description: "how blogging works, how you can make one and how to have fun while doing it!"
 date: git Last Modified
 tag: post
 ---

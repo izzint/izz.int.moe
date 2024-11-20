@@ -59,6 +59,13 @@ button:hover {
 	padding: 5px;
 }
 
+.header {
+    display: inline;
+    padding: 1px;
+    background-color: cadetblue;
+    text-shadow: black, 1px, 1px;
+}
+
 .main_window {
 	background: linear-gradient(#644a4a93, rgba(2, 2, 2, 0.342)), url('/img/header-bg.png');
 	box-shadow:
