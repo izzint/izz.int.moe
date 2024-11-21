@@ -3,7 +3,8 @@ layout: layouts/base.njk
 date: git Last Modified
 ---
 <h3><span>{{title}}</span></h3>
-<h4>{{post.date | shortDate}}</h4>
+<h4>{{ date | shortDate }}</h4>
+{{ date }}
 <hr>
 {{content | safe}}
 <hr>
