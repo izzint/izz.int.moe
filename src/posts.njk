@@ -11,3 +11,10 @@ date: git Last Modified
     <small><i>{{ post.date | shortDate }}</i></small><br>
   </div>
 {%- endfor -%}
+
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Next Page</a>
+{% endif %}

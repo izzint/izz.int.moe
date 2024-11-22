@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+    workflow_dispatch
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23.2.0
+          cache: 'npm'
+
+      - name: Publish to Nekoweb
+        uses: mp-pinheiro/nekoweb-deploy@main
+        with:
+          API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
+          BUILD_DIR: '/site'
+          DEPLOY_DIR: '/'
+          CLEANUP: 'False'
+          DELAY: '0.5'
+          NEKOWEB_PAGENAME: 'izz'
+          ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}

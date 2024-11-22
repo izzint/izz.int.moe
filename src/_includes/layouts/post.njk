@@ -2,10 +2,15 @@
 layout: layouts/base.njk
 date: git Last Modified
 ---
+{% set previousPost = collections.posts | getPreviousCollectionItem %}
+{% set nextPost = collections.posts | getNextCollectionItem %}
+
 <h3><span>{{title}}</span></h3>
 <h4>{{ date | shortDate }}</h4>
-{{ date }}
 <hr>
 {{content | safe}}
 <hr>
-<a href="/posts">back</a>
+
+{% if previousPost %}<a href="{{ previousPost.url }}">◄ last</a>{% endif %}
+<a href="/posts">⌂ home</a>
+{% if nextPost %}<a href="{{ nextPost.url }}">next ►</a>{% endif %}

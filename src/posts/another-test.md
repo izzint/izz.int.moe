@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
-title: about blogging,
-description: its cool again!
+title: "about blogging,"
+description: "its cool again!"
 date: git Last Modified
 tag: post
 ---

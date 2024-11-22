@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: another blog thing
-description: "how blogging works, how you can make one and how to have fun while doing it!"
+description: "uhhhh"
 date: git Last Modified
 tag: post
 ---
