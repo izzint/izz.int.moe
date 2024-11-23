@@ -23,4 +23,3 @@ jobs:
           CLEANUP: 'False'
           DELAY: '0.5'
           NEKOWEB_PAGENAME: 'izz'
-          ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
