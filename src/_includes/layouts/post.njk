@@ -6,7 +6,7 @@ date: git Last Modified
 {% set nextPost = collections.posts | getNextCollectionItem %}
 
 <h3><span>{{title}}</span></h3>
-<h4>{{ date | shortDate }}</h4>
+<h4>{{ page.date | shortDate }}</h4>
 <hr>
 {{content | safe}}
 <hr>

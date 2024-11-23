@@ -2,7 +2,6 @@
 layout: layouts/post.njk
 title: crazy
 description: "no it is crazy... why do i have one"
-date: git Last Modified
 ---
 
 post
@@ -11,7 +10,7 @@ post
 
 ### test 3??
 
-
 its uh,. markdown
 
-> test quote
+> goodnight!! <3
+>

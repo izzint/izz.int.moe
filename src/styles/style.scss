@@ -42,6 +42,10 @@ blockquote {
     border-left: #b26870 1em groove;
     box-shadow: 4px 4px #08080871;
     padding: 0.1em 1em;
+
+    img {
+        height: 9em;
+    }
 }
 
 a {
@@ -58,10 +62,10 @@ a {
 }
 
 .header {
-    display: inline;
-    padding: 1px;
-    background-color: cadetblue;
-    text-shadow: black, 1px, 1px;
+    font-style: italic;
+    padding: 0.2em;
+    margin: -10px;
+    background: linear-gradient(90deg, #754e63, rgba(0, 0, 255, 0));
 }
 
 .main_window {
@@ -189,7 +193,7 @@ a {
 .footer {
     grid-area: footer;
     padding: 10px;
-    background-image: url('/img/mainbg.png');
+    background-image: url('/img/background.png');
     background-size: 64px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
