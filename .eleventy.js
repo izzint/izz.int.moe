@@ -10,8 +10,8 @@ export default async function(eleventyConifg) {
     eleventyConifg.addExtension("scss", {
         outputFileExtension: "css",
 
-        compile: async function (inputContent) {
-            let result = compileString(inputContent);
+        compile: async function (input) {
+            let result = compileString(input);
 
             return async (data) => {
                 return result.css;
