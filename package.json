@@ -1,6 +1,6 @@
 {
   "name": "izz.nekoweb.org",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "the new new izz site",
   "main": "index.js",
   "scripts": {
