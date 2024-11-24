@@ -1,4 +1,4 @@
-$content-bg-color: rgb(62, 54, 66);
+$content-bg-color: #3e3642;
 
 html {
     box-sizing: border-box;
@@ -144,7 +144,7 @@ a {
 
 @mixin base-content {
     padding: 10px;
-    border: double 3px rgb(95, 95, 95);
+    border: double 3px #5f5f5f;
     border-radius: 5px;
     background-color: $content-bg-color;
     box-shadow: 3px 3px 5px #080808;
@@ -158,6 +158,8 @@ a {
         margin: -10px;
         background-image: url('/img/home-bg.png');
         background-repeat: no-repeat;
+        padding: 0%;
+        background-size: 100%;
         height: 320px
     }
 }
