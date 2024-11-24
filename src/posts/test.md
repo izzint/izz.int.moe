@@ -14,3 +14,9 @@ its uh,. markdown
 
 > goodnight!! <3
 >
+
+```js
+    eleventyConifg.addCollection('posts', collection => {
+        return collection.getFilteredByGlob('src/posts/*.md')
+    });
+```

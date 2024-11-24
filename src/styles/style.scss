@@ -49,7 +49,16 @@ blockquote {
 }
 
 a {
-    color: #4058db;
+    color: #ffb18b;
+    text-decoration: none;
+    
+    &:visited {
+        color: #d87341;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 /* Classes */
@@ -62,7 +71,6 @@ a {
 }
 
 .header {
-    font-style: italic;
     padding: 0.2em;
     margin: -10px;
     background: linear-gradient(90deg, #754e63, rgba(0, 0, 255, 0));
@@ -145,6 +153,13 @@ a {
 .main-content {
     @include base-content;
     grid-area: main-content;
+
+    & .fancy-bg {
+        margin: -10px;
+        background-image: url('/img/home-bg.png');
+        background-repeat: no-repeat;
+        height: 320px
+    }
 }
 
 .sidebar-left {
