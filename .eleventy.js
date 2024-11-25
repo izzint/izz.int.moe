@@ -20,7 +20,7 @@ export default async function(eleventyConifg) {
     });
 
     eleventyConifg.addFilter("shortDate", (date) => {
-        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_MED);
+        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED).toLowerCase();
     });
 
     eleventyConifg.addPlugin(feedPlugin, {

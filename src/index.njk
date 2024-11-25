@@ -6,8 +6,8 @@ date: git Last Modified
 ---
 <div class="fancy-bg"></div><br>
 
-<!-- TODO: REWORK -->
-<h3 class="header">> whats new?</h3>
-{% for post in collections.posts.slice(0,1) %}
-    {{post.data.title}}
-{% endfor %}
+<h3 class="header">> whats new?</h3><br>
+
+{% set latestPost = collections.posts[0] %}
+<a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a> - {{ latestPost.date | shortDate }}<hr>
+{{ latestPost.content | safe }}
