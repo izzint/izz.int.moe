@@ -4,5 +4,10 @@ title: home
 layout: layouts/base.njk
 date: git Last Modified
 ---
-<div class="fancy-bg"></div>
-<h3>welcome<h3>
+<div class="fancy-bg"></div><br>
+
+<!-- TODO: REWORK -->
+<h3 class="header">> whats new?</h3>
+{% for post in collections.posts.slice(0,1) %}
+    {{post.data.title}}
+{% endfor %}
