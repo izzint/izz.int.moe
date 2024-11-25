@@ -1,5 +1,4 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import eleventyNavigation from "@11ty/eleventy-navigation";
 import { DateTime } from "luxon";
 import { compileString } from "sass";
 
@@ -41,8 +40,6 @@ export default async function(eleventyConifg) {
             }
         }
     });
-
-    eleventyConifg.addPlugin(eleventyNavigation);
 
     eleventyConifg.addCollection('posts', collection => {
         return collection.getFilteredByGlob('src/posts/*.md')
