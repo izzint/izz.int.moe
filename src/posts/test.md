@@ -1,7 +1,9 @@
 ---
 layout: layouts/post.njk
 title: crazy
-description: "no it is crazy... why do i have one"
+description: "this is a blog description but i dont really know what to write"
+tags:
+    - test
 ---
 
 post

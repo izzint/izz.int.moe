@@ -7,7 +7,8 @@ date: git Last Modified
 <div class="fancy-bg"></div><br>
 
 <!-- TODO: REWORK -->
-<h3 class="header">> whats new?</h3>
+<h3 class="header">> whats new?</h3><br>
 {% for post in collections.posts.slice(0,1) %}
-    {{post.data.title}}
+    <a href="{{post.url}}">{{post.data.title}}</a> - {{post.date | shortDate}}<br>
+    {{post.data.description}}
 {% endfor %}
