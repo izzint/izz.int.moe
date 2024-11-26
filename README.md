@@ -1,3 +1,2 @@
-## izz.nekoweb.org
-  the new new izz site <br>
-  <sub> waow... its node </sub>
+### izz.nekoweb.org
+personal homepage written using the [11ty](https://www.11ty.dev) framework.<br>
