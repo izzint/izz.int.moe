@@ -11,12 +11,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 23.2.0
           cache: 'npm'
-      - run: npm install
+      
+      - name: Setup Dependencies
+        uses: bahmutov/npm-install@v1
+
       - run: npm run build
 
       - name: Publish to Nekoweb
