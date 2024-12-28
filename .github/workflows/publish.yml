@@ -23,11 +23,10 @@ jobs:
       - run: npm run build
 
       - name: Publish to Nekoweb
-        uses: mp-pinheiro/nekoweb-deploy@main
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
-          BUILD_DIR: '/site'
-          DEPLOY_DIR: '/'
-          CLEANUP: 'False'
-          DELAY: '0.5'
-          NEKOWEB_PAGENAME: 'izz'
+          server: 'ftp-usa.nekoweb.org'
+          port: 30000
+          local-dir: './site/'
+          username: 'izz'
+          password: ${{ secrets.NEKOWEB_API_KEY }}
