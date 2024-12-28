@@ -1,6 +1,7 @@
 $content-bg-color: #3e3642;
 
-html {
+:root {
+    overflow-x: hidden;
     box-sizing: border-box;
     image-rendering: pixelated;
 }
@@ -44,7 +45,8 @@ blockquote {
     padding: 0.1em 1em;
 
     img {
-        height: 9em;
+        image-rendering: optimizeQuality;
+        height: 10em;
     }
 }
 
@@ -70,6 +72,18 @@ a {
     padding: 5px;
 }
 
+.clouds {
+    margin: -0%;
+    position: absolute;
+    z-index: -1;
+    background: url('/img/cloudbg.png');
+    min-height: 800px;
+    min-width: 150vw;
+    background-size: 300vh;
+    background-clip: 0%;
+    animation: cloud_scroll 70s linear infinite;
+}
+
 .header {
     padding: 0.2em;
     margin: -10px;
@@ -89,14 +103,13 @@ a {
     padding: 25px;
     display: grid;
     grid-template-columns: 1fr 3.5fr 1fr;
-    grid-template-rows: 1fr 1fr 1.5fr 37px 0.3fr;
+    grid-template-rows: 1fr 1fr 1.5fr 37px;
     gap: 10px 10px;
     grid-template-areas:
         "banner banner banner"
         "sidebar-left main-content listening-to"
         "sidebar-left main-content sidebar-right"
-        "buttons buttons buttons"
-        "footer footer footer";
+        "buttons buttons buttons";
 }
 
 .vistor_counter {
@@ -137,7 +150,7 @@ a {
     box-shadow: 3px 3px 5px #080808;
 
     img {
-        margin-top: 15px;
+        margin-top: 3px;
         margin-left: 5px;
     }
 }
@@ -153,6 +166,7 @@ a {
 .main-content {
     @include base-content;
     grid-area: main-content;
+    overflow-y: auto;
 
     & .fancy-bg {
         margin: -10px;
@@ -182,6 +196,7 @@ a {
 .listening-to {
     grid-area: listening-to;
     min-width: 174px;
+    min-height: 199.1px;
     max-height: 199.1px;
     font-family: 'LED', 'Courier New', Courier, monospace;
     color: orchid;
@@ -217,22 +232,6 @@ a {
     box-shadow: 3px 3px 5px #080808;
 }
 
-/* Misc */
-
-#statuscafe {
-    padding: .5em;
-    background-color: rgb(58, 70, 70);
-    border: 1px solid midnightblue;
-}
-
-#statuscafe-username {
-    margin-bottom: .5em;
-}
-
-#statuscafe-content {
-    margin: 0 1em 0.5em 1em;
-}
-
 /* Fonts */
 
 @font-face {
@@ -264,5 +263,11 @@ a {
 @keyframes bg_scroll {
     100% {
         background-position: 100%;
+    }
+}
+
+@keyframes cloud_scroll {
+    100% {
+        background-position-x: -300vh;
     }
 }

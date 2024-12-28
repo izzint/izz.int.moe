@@ -10,4 +10,4 @@ date: git Last Modified
 
 {% set latestPost = collections.posts[0] %}
 <a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a> - {{ latestPost.date | shortDate }}<hr>
-{{ latestPost.content | safe }}<br>
+{{ latestPost.data.description | safe }}<hr>

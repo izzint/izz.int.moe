@@ -34,15 +34,15 @@ export default async function(eleventyConifg) {
             language: "en",
             title: "izzint",
             subtitle: "wip",
-            base: "https://izz.nekoweb.org",
+            base: "https://izz.int.moe",
             author: {
-                name: "izzint"
+                name: "izz"
             }
         }
     });
 
     eleventyConifg.addCollection('posts', collection => {
-        return collection.getFilteredByGlob('src/posts/*.md')
+        return collection.getFilteredByGlob('src/posts/*.md').toReversed() // hack to insure date ordering is correct
     });
 
     return {

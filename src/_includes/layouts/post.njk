@@ -8,7 +8,9 @@ date: git Last Modified
 <h3 class="header">{{title}} - <small>{{ page.date | shortDate }}</small></h3><br>
 
 <hr>
+<div style="overflow-y: scroll;">
 {{content | safe}}
+</div>
 <hr>
 
 {% if previousPost %}<a href="{{ previousPost.url }}">◄ last</a>{% endif %}
