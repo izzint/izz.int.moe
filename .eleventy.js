@@ -42,7 +42,7 @@ export default async function(eleventyConifg) {
     });
 
     eleventyConifg.addCollection('posts', collection => {
-        return collection.getFilteredByGlob('src/posts/*.md').toReversed() // hack to insure date ordering is correct
+        return collection.getFilteredByGlob('src/posts/*.md')
     });
 
     return {
