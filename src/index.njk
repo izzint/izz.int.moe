@@ -6,8 +6,11 @@ date: git Last Modified
 ---
 <div class="fancy-bg"></div><br>
 
+
 <h3 class="header">> whats new?</h3><br>
 
+<fieldset style="border: solid 1px #5f5f5f;">
 {% set latestPost = collections.posts[0] %}
-<a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a> - {{ latestPost.date | shortDate }}<hr>
-{{ latestPost.data.description | safe }}<hr>
+<legend><a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a> - {{ latestPost.date | shortDate }}</legend>
+{{ latestPost.data.description }}
+</fieldset>

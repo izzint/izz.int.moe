@@ -1,14 +1,13 @@
 ---
 layout: layouts/base.njk
-date: git Last Modified
+date: git Created
 ---
 {% set previousPost = collections.posts | getPreviousCollectionItem %}
 {% set nextPost = collections.posts | getNextCollectionItem %}
 
 <h3 class="header">{{title}} - <small>{{ page.date | shortDate }}</small></h3><br>
 
-<hr>
-<div style="overflow-y: scroll;">
+<div style="max-height: 100%">
 {{content | safe}}
 </div>
 <hr>
@@ -16,8 +15,3 @@ date: git Last Modified
 {% if previousPost %}<a href="{{ previousPost.url }}">◄ last</a>{% endif %}
 <a href="/posts">⌂ home</a>
 {% if nextPost %}<a href="{{ nextPost.url }}">next ►</a>{% endif %}<br>
-
-<br><h3 class="header">> tags</h4><br>
-{%- for tag in tags -%}
-<small><a href="/tags/{{ tag }}"> {{ tag }}</a></small>
-{%- endfor -%}
