@@ -11,7 +11,7 @@ export default async function(eleventyConifg) {
         outputFileExtension: "css",
 
         compile: async function (input) {
-            let result = compileString(input);
+            let result = compileString(input, {style: "compressed"});
 
             return async (data) => {
                 return result.css;

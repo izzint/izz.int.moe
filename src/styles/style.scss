@@ -23,7 +23,7 @@ button {
     background: linear-gradient(to bottom, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
     width: 100%;
     font-family: 'MS UI Gothic', Arial, Helvetica, sans-serif;
-    text-align: center;
+    text-align: left;
     border: none;
     border-radius: 3px;
     margin-bottom: 5px;
@@ -93,6 +93,7 @@ a {
     margin: -10px;
     background: linear-gradient(90deg, #754e63, rgba(0, 0, 255, 0));
 }
+
 
 .main_window {
     background: linear-gradient(#644a4a93, rgba(2, 2, 2, 0.342)), url('/img/header-bg.png');
@@ -182,6 +183,14 @@ a {
         padding-bottom: 3px;
         box-shadow: #29b8e5 0px 0px 5px;
         background: linear-gradient(to bottom, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+
+        &::before {
+            content: '> ';
+        }
+    }
+
+    button::before {
+        content: '* ';
     }
 }
 
@@ -265,5 +274,17 @@ a {
 @keyframes cloud_scroll {
     100% {
         background-position-x: -300vh;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg) scale(105%);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
