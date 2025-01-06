@@ -138,6 +138,7 @@ a {
     background: url('/img/scanline-bg.png'), $content-bg-color;
     box-shadow: 3px 3px 5px #080808;
     animation: scanline linear 30s infinite;
+    max-height: 481.75px;
 }
 
 .banner {
@@ -159,7 +160,7 @@ a {
 .main-content {
     @include base-content;
     grid-area: main-content;
-    min-height: 0;
+    overflow-y: auto;
 
     & .fancy-bg {
         margin: -10px;
