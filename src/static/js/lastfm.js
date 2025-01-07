@@ -1,10 +1,4 @@
-/*
-this script is free to use for anything, whenever!
-by izz
-*/
-
 const username = "izzint";
-const playback = true;
 
 async function getSong() {
   const portfolio = document.createElement("img"); // create the image early so we can load the placeholder
@@ -19,7 +13,6 @@ async function getSong() {
   portfolio.alt = current.track.album[`#text`];
   portfolio.src = current.track.image[2]['#text'];
 
-  // lastly,, we add everything to the page
   listeningTo.appendChild(portfolio);
   listeningTo.appendChild(info);
 };
