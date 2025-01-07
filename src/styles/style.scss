@@ -221,6 +221,7 @@ a {
     @include base-content;
     padding: 0;
     grid-area: buttons;
+    overflow: hidden;
 }
 
 .footer {
