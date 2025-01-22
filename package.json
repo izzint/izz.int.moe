@@ -1,5 +1,6 @@
 {
   "name": "izz.nekoweb.org",
+  "private": true,
   "version": "1.0.1",
   "description": "the new new izz site",
   "main": "index.js",
