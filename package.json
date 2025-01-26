@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "izzint",
-  "license": "MIT",
+  "license": "AGPL",
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
