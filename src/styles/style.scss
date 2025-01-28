@@ -279,15 +279,3 @@ a {
         background-position-x: -300vh;
     }
 }
-
-@keyframes shake {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(5deg) scale(105%);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
