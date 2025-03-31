@@ -27,7 +27,6 @@ export default async function(eleventyConifg) {
             });
             return minified
         }
-        
         return input;
     })
 
@@ -45,10 +44,10 @@ export default async function(eleventyConifg) {
         metadata: {
             language: "en",
             title: "izzint",
-            subtitle: "wip",
             base: "https://izz.int.moe",
             author: {
-                name: "izz"
+                name: "izz",
+                email: "izz@int.moe"
             }
         }
     });

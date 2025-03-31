@@ -21,12 +21,3 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - run: npm run build
-
-      - name: Publish to Nekoweb
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: 'ftp-usa.nekoweb.org'
-          port: 30000
-          local-dir: './site/'
-          username: 'izz'
-          password: ${{ secrets.NEKOWEB_API_KEY }}
