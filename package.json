@@ -1,12 +1,12 @@
 {
-  "name": "izz.nekoweb.org",
+  "name": "izz.int.moe",
   "private": true,
   "version": "1.0.1",
   "description": "the new new izz site",
   "main": "index.js",
   "scripts": {
-    "serve": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "serve": "deno --allow-all npm:@11ty/eleventy --serve",
+    "build": "deno --allow-all npm:@11ty/eleventy"
   },
   "keywords": [],
   "author": "izzint",
@@ -14,7 +14,6 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
     "html-minifier-terser": "^7.2.0",
     "luxon": "^3.5.0",
     "sass": "^1.81.0"

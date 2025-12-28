@@ -1,7 +1,6 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { DateTime } from "luxon";
 import { compileString } from "sass";
-import { minify } from "html-minifier-terser";
 
 export default async function(eleventyConifg) {
     eleventyConifg.addPassthroughCopy({"src/static": "/" });
@@ -12,24 +11,13 @@ export default async function(eleventyConifg) {
         outputFileExtension: "css",
 
         compile: async function (input) {
-            let result = compileString(input, {style: "compressed"});
+            let result = compileString(input, {style: "expanded"});
 
             return async (data) => {
                 return result.css;
             };
         },
     });
-
-    eleventyConifg.addTransform("minify", async function (input) {
-        if (this.page.outputFileExtension == "html") {
-            let minified = minify(input, {
-                collapseWhitespace: true
-            });
-            return minified
-        }
-        
-        return input;
-    })
 
     eleventyConifg.addFilter("shortDate", (date) => {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED).toLowerCase();
@@ -40,15 +28,15 @@ export default async function(eleventyConifg) {
         outputPath: "/feed.xml",
         collection: {
             name: "posts",
-            limit: 15
+            limit: 4
         },
         metadata: {
             language: "en",
             title: "izzint",
-            subtitle: "wip",
             base: "https://izz.int.moe",
             author: {
-                name: "izz"
+                name: "izzy",
+                email: "izzint@kakao.com"
             }
         }
     });

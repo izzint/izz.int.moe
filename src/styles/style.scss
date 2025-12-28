@@ -4,10 +4,12 @@ $content-bg-color: #3e3642;
     overflow-x: hidden;
     box-sizing: border-box;
     image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'MS UI Gothic', Arial, Helvetica, sans-serif;
+    font-family: MS UI Gothic, Terminus, Helvetica, Arial, sans-serif;
     background: url('/img/backbackground.png');
     background-size: 128px;
     color: white;
@@ -21,8 +23,8 @@ hr {
 
 button {
     background: linear-gradient(to bottom, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
+    font-family: MS UI Gothic, Terminus, Helvetica, Arial, sans-serif;
     width: 100%;
-    font-family: 'MS UI Gothic', Arial, Helvetica, sans-serif;
     text-align: left;
     border: none;
     border-radius: 3px;
@@ -71,9 +73,7 @@ a {
 
 .container {
     width: 60em;
-    height: 95vh;
     margin: auto;
-    padding: 5px;
 }
 
 .clouds {
@@ -103,7 +103,7 @@ a {
         inset 5px 5px 15px rgba(255, 255, 255, 0.548),
         0px 0px 25px rgb(0, 0, 0);
     border-width: 10px;
-    border-style: groove;
+    border-style: solid;
     border-image: linear-gradient(#3b3333, #080808) 27;
     padding: 25px;
     display: grid;
@@ -112,18 +112,9 @@ a {
     gap: 10px;
     grid-template-areas:
         "banner banner banner"
-        "sidebar-left main-content listening-to"
-        "sidebar-left main-content sidebar-right"
-        "buttons buttons buttons";
-}
-
-.counter {
-    font-family: 'LED';
-    background: url('/img/scanline-bg.png'), rgb(17, 17, 17);
-    font-size: larger;
-    text-align: center;
-    padding: 2px;
-    margin-top: 0;
+        "sidebar-left main-content main-content"
+        "sidebar-left main-content main-content"
+        "sidebar-left main-content main-content";
 }
 
 .goodie {
@@ -196,18 +187,6 @@ a {
     }
 }
 
-.listening-to {
-    grid-area: listening-to;
-    min-width: 174px;
-    height: 199.1px;
-    font-family: 'LED', 'Courier New', Courier, monospace;
-    color: orchid;
-    background-color: black;
-    text-shadow: 2px 2px black;
-    border-radius: 5px;
-    background: url('/img/scanline-bg.png'), black linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.493) 41%, rgba(0, 212, 255, 0) 100%);
-}
-
 .listening-to img {
     width: 100%;
 }
@@ -237,26 +216,14 @@ a {
 /* Fonts */
 
 @font-face {
-    font-family: 'Grotesk';
-    src: url('/fonts/grotesk.ttf');
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Helvetica Narrow';
     src: url('/fonts/narrow.ttf');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'LED';
-    src: url('/fonts/led.otf');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Comic Pixel';
-    src: url('/fonts/comic-pixel.ttf');
+    font-family: 'Terminus';
+    src: url('/fonts/terminus.ttf');
     font-display: swap;
 }
 
