@@ -5,5 +5,12 @@ date: git Last Modified
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title></title>
-    <updated>{{ date.time }}</updated>
+    <link href="https://izz.int.moe/"/>
+    <link type="application/atom+xml" rel="self" href="https://izz.int.moe/feed.atom"/>
+    <updated>{{ page.date.now }}</updated>
+    <id>https://izz.int.moe/feed.atom</id>
+    <author>
+        <name>izzy</name>
+        <uri>https://izz.int.moe</uri>
+    </author>
 </feed>
