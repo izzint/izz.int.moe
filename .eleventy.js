@@ -1,4 +1,3 @@
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { DateTime } from "luxon";
 import { compileString } from "sass";
 
@@ -21,24 +20,6 @@ export default async function(eleventyConifg) {
 
     eleventyConifg.addFilter("shortDate", (date) => {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED).toLowerCase();
-    });
-
-    eleventyConifg.addPlugin(feedPlugin, {
-        type: "rss",
-        outputPath: "/feed.xml",
-        collection: {
-            name: "posts",
-            limit: 4
-        },
-        metadata: {
-            language: "en",
-            title: "izzint",
-            base: "https://izz.int.moe",
-            author: {
-                name: "izzy",
-                email: "izzint@kakao.com"
-            }
-        }
     });
 
     eleventyConifg.addCollection('posts', collection => {
