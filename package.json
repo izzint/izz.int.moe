@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "izzint",
-  "license": "AGPL-3.0-only",
+  "license": "BSD-3-Clause",
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
