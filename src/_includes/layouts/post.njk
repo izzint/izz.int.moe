@@ -12,4 +12,8 @@ date: git Created
 
 {% if previousPost %}<a href="{{ previousPost.url }}">◄ last</a>{% endif %}
 <a href="/posts">⌂ home</a>
-{% if nextPost %}<a href="{{ nextPost.url }}">next ►</a>{% endif %}<br>
+{% if nextPost %}<a href="{{ nextPost.url }}">next ►</a>{% endif %}
+
+{%- for tag in tags -%}
+<small><a href="/tags/{{ tag }}"> {{ tag }}</a></small>
+{%- endfor -%}

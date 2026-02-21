@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en_CA">
     <head>
         <title>izz - {{ title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,19 +21,21 @@
         <div class="clouds"></div>
         <div class="container">
             <div class="main_window"> 
-                <div class="banner">
+                <header class="banner">
                     <img alt="izz.int.moe logo" src="/img/logo.png">
-                </div>
-                <div class="main-content">
+                </header>
+                <main class="main-content">
                     {{ content | safe }}
-                </div>
-                <div class="sidebar-left">
+                </main>
+                <aside class="sidebar-left">
                     <h3 class="header">> explore</h3><br> 
+                    <nav>
                     <button onclick="location.href='/'" type="button">home</button>
                     <button onclick="location.href='/404'" type="button">portfolio</button>
                     <button onclick="location.href='/posts'" type="button">blog</button>
                     <button onclick="location.href='/feed.xml'" type="button">feed</button>
-                </div>
+                    </nav>
+                </aside>
             </div>
         </div>
     </body>
