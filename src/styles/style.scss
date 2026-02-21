@@ -217,13 +217,13 @@ a {
 @font-face {
     font-family: 'Helvetica Narrow';
     src: url('/fonts/narrow.ttf');
-    font-display: swap;
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'Terminus';
     src: url('/fonts/terminus.ttf');
-    font-display: swap;
+    font-display: fallback;
 }
 
 /* Animations */
