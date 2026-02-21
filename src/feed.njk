@@ -1,13 +1,13 @@
 ---
-permalink: /feed.atom
+permalink: /feed.xml
 date: git Last Modified
 ---
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title></title>
+    <title>izz.int.moe feed</title>
     <link href="https://izz.int.moe/"/>
-    <link type="application/atom+xml" rel="self" href="https://izz.int.moe/feed.atom"/>
-    <updated>{{ page.date.now }}</updated>
+    <link type="application/atom+xml" rel="self" href="https://izz.int.moe/feed.xml"/>
+    <updated>{{ page.date.toISOString() }}</updated>
     <id>https://izz.int.moe/feed.atom</id>
     <author>
         <name>izzy</name>

@@ -1,19 +1,8 @@
-import { minify } from "html-minifier-terser";
 import { DateTime } from "luxon";
 import { compileStringAsync } from "sass";
 
 export default async function(eleventyConifg) {
     eleventyConifg.addPassthroughCopy({"src/static": "/" });
-
-    eleventyConifg.addTransform("minify", async function (input) {
-        if (this.page.outputFileExtension == "html") {
-            const minified = minify(input, {
-                collapseWhitespace: true
-            });
-            return minified;
-        }
-        return input;
-    });
 
     eleventyConifg.addTemplateFormats("scss");
 
@@ -29,8 +18,8 @@ export default async function(eleventyConifg) {
         },
     });
 
-    eleventyConifg.addFilter("shortDate", (date) => {
-        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED).toLowerCase();
+    eleventyConifg.addFilter("bigAssDate", (date) => {
+        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_HUGE).toLowerCase();
     });
 
     eleventyConifg.addCollection("posts", (collection) => {

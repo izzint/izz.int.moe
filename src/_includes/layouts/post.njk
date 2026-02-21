@@ -5,7 +5,7 @@ date: git Created
 {% set previousPost = collections.posts | getPreviousCollectionItem %}
 {% set nextPost = collections.posts | getNextCollectionItem %}
 
-<h3 class="header">{{title}} - <small>{{ page.date | shortDate }}</small></h3><br>
+<h3 class="header">{{title}} - <small>{{ page.date | bigAssDate }}</small></h3><br>
 
 {{content | safe}}
 <hr>
