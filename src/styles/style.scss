@@ -14,7 +14,7 @@ body {
     background-size: 128px;
     color: white;
     text-shadow: 1px 1px rgb(0, 0, 0);
-    animation: bg_scroll 60s linear infinite;
+    animation: bg_scroll 150s linear infinite;
 }
 
 hr {
@@ -83,9 +83,8 @@ a {
     background: url('/img/cloudbg.png');
     min-height: 800px;
     min-width: 150vw;
-    background-size: 300vh;
-    background-clip: 0%;
-    animation: cloud_scroll 70s linear infinite;
+    background-size: auto 100%;
+    animation: cloud_scroll 500s linear infinite;
 }
 
 .header {
