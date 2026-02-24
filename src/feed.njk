@@ -1,16 +1,24 @@
 ---
-permalink: /feed.xml
+permalink: /rss.xml
 date: git Last Modified
 ---
-<?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>izz.int.moe feed</title>
-    <link href="https://izz.int.moe/"/>
-    <link type="application/atom+xml" rel="self" href="https://izz.int.moe/feed.xml"/>
-    <updated>{{ page.date.toISOString() }}</updated>
-    <id>https://izz.int.moe/feed.atom</id>
-    <author>
-        <name>izzy</name>
-        <uri>https://izz.int.moe</uri>
-    </author>
-</feed>
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>izz.int.moe</title>
+        <link>https://izz.int.moe/</link>
+        <description>the blue canary</description>
+        <language>en-ca</language>
+        <managingEditor>izz@int.moe</managingEditor>
+        <webMaster>izz@int.moe</webMaster>
+        <copyright>izzint</copyright>
+        <lastBuildDate>{{ page.date | rssDate }}</lastBuildDate>
+        {%- for post in collections.posts -%}
+        <item>
+            <title>{{ post.data.title }}</title>
+            <link>https://izz.int.moe{{ post.url }}</link>
+            <description>{{post.content | striptags | enshorten}}...</description>
+        </item>
+        {%- endfor -%}
+    </channel>
+</rss>
