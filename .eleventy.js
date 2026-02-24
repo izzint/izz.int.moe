@@ -26,6 +26,11 @@ export default async function(eleventyConifg) {
         return DateTime.fromJSDate(date).toRFC2822();
     });
 
+    eleventyConifg.addShortcode("rssBuildDate", function() {
+        return DateTime.now().toRFC2822();
+    })
+
+
     eleventyConifg.addFilter("enshorten", (what) => {
         var shortend = what.trim()
 
