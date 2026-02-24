@@ -9,15 +9,23 @@ date: git Last Modified
         <link>https://izz.int.moe/</link>
         <description>the blue canary</description>
         <language>en-ca</language>
-        <managingEditor>izz@int.moe</managingEditor>
-        <webMaster>izz@int.moe</webMaster>
+        <managingEditor>izz@int.moe (izzy)</managingEditor>
+        <webMaster>izz@int.moe (izzy)</webMaster>
         <copyright>izzint</copyright>
         <lastBuildDate>{{ page.date | rssDate }}</lastBuildDate>
+        <image>
+            <title>izz.int.moe</title>
+            <link>https://izz.int.moe/</link>
+            <url>https://izz.int.moe/img/favicon.gif</url>
+            <width>64</width>
+            <height>64</height>
+        </image>
         {%- for post in collections.posts -%}
         <item>
             <title>{{ post.data.title }}</title>
+            <pubDate>{{ post.date | rssDate }}</pubDate>
             <link>https://izz.int.moe{{ post.url }}</link>
-            <description>{{post.content | striptags | enshorten}}...</description>
+            <description><![CDATA[{{post.content | enshorten}}...]]></description>
         </item>
         {%- endfor -%}
     </channel>
