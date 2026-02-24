@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { compileStringAsync } from "sass";
+import { compileString } from "sass";
 
 export default async function(eleventyConifg) {
     eleventyConifg.addPassthroughCopy({"src/static": "/" });
@@ -10,7 +10,7 @@ export default async function(eleventyConifg) {
         outputFileExtension: "css",
 
         compile: async function (input) {
-            const result = await compileStringAsync(input);
+            const result = compileString(input);
 
             return async (data) => {
                 return result.css;
