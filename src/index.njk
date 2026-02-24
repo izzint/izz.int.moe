@@ -12,5 +12,5 @@ date: git Last Modified
 <fieldset style="border: solid 1px #5f5f5f;">
 {% set latestPost = collections.posts[0] %}
 <legend><a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a> - {{ latestPost.date | bigAssDate }}</legend>
-{{ latestPost.data.description }}
+{{latestPost.content | striptags | enshorten}}...
 </fieldset>

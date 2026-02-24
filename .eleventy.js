@@ -22,6 +22,12 @@ export default async function(eleventyConifg) {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_HUGE).toLowerCase();
     });
 
+    eleventyConifg.addFilter("enshorten", (what) => {
+        var shortend = what.trim()
+
+        return shortend.split(" ").slice(0, 32).join(" "); // :c
+    });
+
     eleventyConifg.addCollection("posts", (collection) => {
         return collection.getFilteredByGlob("src/posts/*.md").toReversed(); // hack
     });

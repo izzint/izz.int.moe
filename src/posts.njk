@@ -8,7 +8,7 @@ date: git Last Modified
 {%- for post in collections.posts -%}
   <div class="goodie">
     <a href="{{post.url}}">> {{post.data.title}}</a><hr>
-    <p>{{post.data.description}}</p><hr>
+    <p>{{post.content | striptags | enshorten}}...</p><hr>
     <small><i>{{ post.date | bigAssDate }}</i></small>
   </div>
 {%- endfor -%}

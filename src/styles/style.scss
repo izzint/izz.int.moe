@@ -153,12 +153,15 @@ a {
     @include base-content;
     grid-area: main-content;
 
+    overflow-x: hidden;
+
     & .fancy-bg {
         margin: -10px;
         background-image: url('/img/home-bg.png');
         background-repeat: no-repeat;
         padding: 0%;
         background-size: 100%;
+        animation: jitter 16s cubic-bezier(0.19, 1, 0.22, 1) infinite;
         height: 320px
     }
 }
@@ -243,5 +246,11 @@ a {
 @keyframes cloud_scroll {
     100% {
         background-position-x: -300vh;
+    }
+}
+
+@keyframes jitter {
+    25% {
+        background-position-y: 5%;
     }
 }
