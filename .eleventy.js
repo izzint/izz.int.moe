@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 import { compileString } from "sass";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default async function(eleventyConifg) {
     eleventyConifg.addPassthroughCopy({"src/static": "/" });
@@ -40,6 +41,8 @@ export default async function(eleventyConifg) {
     eleventyConifg.addCollection("posts", (collection) => {
         return collection.getFilteredByGlob("src/posts/*.md").toReversed(); // hack
     });
+
+    eleventyConifg.addPlugin(syntaxHighlight);
 
     return {
         dir: {
