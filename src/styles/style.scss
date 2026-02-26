@@ -14,7 +14,7 @@ body {
     background-size: 128px;
     color: white;
     text-shadow: 1px 1px rgb(0, 0, 0);
-    animation: bg_scroll 150s linear infinite;
+    animation: bg-scroll 150s linear infinite;
 }
 
 hr {
@@ -84,13 +84,14 @@ a {
     min-height: 800px;
     min-width: 150vw;
     background-size: auto 100%;
-    animation: cloud_scroll 500s linear infinite;
+    animation: cloud-scroll 500s linear infinite;
 }
 
 .header {
     padding: 0.2em;
     margin: -10px;
-    background: linear-gradient(90deg, #754e63, rgba(0, 0, 255, 0));
+    animation: header-anim 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+    background: linear-gradient(360deg, #754e63, rgba(0, 0, 255, 0));
 }
 
 
@@ -161,7 +162,7 @@ a {
         background-repeat: no-repeat;
         padding: 0%;
         background-size: 100%;
-        animation: jitter 16s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+        animation: jitter 24s cubic-bezier(.68,-0.55,.27,1.55) infinite;
         height: 320px
     }
 }
@@ -231,7 +232,7 @@ a {
 
 /* Animations */
 
-@keyframes bg_scroll {
+@keyframes bg-scroll {
     100% {
         background-position: 100%;
     }
@@ -243,7 +244,7 @@ a {
     }
 }
 
-@keyframes cloud_scroll {
+@keyframes cloud-scroll {
     100% {
         background-position-x: -300vh;
     }
