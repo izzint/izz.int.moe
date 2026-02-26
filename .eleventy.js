@@ -19,20 +19,19 @@ export default async function (eleventyConifg) {
     });
 
     eleventyConifg.addFilter("bigAssDate", (date) => {
-        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_HUGE).toLowerCase();
+        return DateTime.fromJSDate(date).setZone('America/Toronto').toLocaleString(DateTime.DATETIME_HUGE).toLowerCase();
     });
 
     eleventyConifg.addFilter("rssDate", (date) => {
-        return DateTime.fromJSDate(date).toRFC2822();
+        return DateTime.fromJSDate(date).setZone('America/Toronto').toRFC2822();
     });
 
     eleventyConifg.addShortcode("rssBuildDate", function () {
-        return DateTime.now().toRFC2822();
+        return DateTime.now().setZone('America/Toronto').toRFC2822();
     });
 
     eleventyConifg.addFilter("enshorten", (what) => {
         var shortend = what.trim()
-
         return shortend.split(" ").slice(0, 32).join(" "); // :c
     });
 

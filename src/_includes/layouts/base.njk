@@ -7,7 +7,13 @@
         <!-- opengraph -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ title }}">
+        
+        {%- if not description -%}
+        <meta property="og:description" content="{{post.content | striptags | enshorten}}">
+        {%- else -%}
         <meta property="og:description" content="{{ description }}">
+        {%- endif -%}
+
         <meta property="og:url" content="https://izz.int.moe/">
         <meta property="og:image" content="/img/favicon.gif">
         <meta property="og:site_name" content="izz">

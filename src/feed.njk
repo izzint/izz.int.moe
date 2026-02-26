@@ -25,7 +25,11 @@ date: git Last Modified
             <title>{{ post.data.title }}</title>
             <pubDate>{{ post.date | rssDate }}</pubDate>
             <link>https://izz.int.moe{{ post.url }}</link>
-            <description><![CDATA[{{post.content | striptags | enshorten}}...]]> <a href="https://izz.int.moe{{ post.url }}">read more...</a></description>
+            {%- if not description -%}
+            <description><![CDATA[{{ post.content | striptags | enshorten }}...]]></description>
+            {%- else -%}
+            <description><![CDATA[{{ post.description }}]]></description>
+            {%- endif -%}
         </item>
         {%- endfor -%}
     </channel>
