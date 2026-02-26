@@ -6,8 +6,8 @@
 
         <!-- opengraph -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="izz - {{ title }}">
-        <meta property="og:description" content="{{ description }}">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ content | striptags | enshorten}}...">
         <meta property="og:url" content="https://izz.int.moe/">
         <meta property="og:image" content="/img/favicon.gif">
         <meta property="og:site_name" content="izz">
@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/styles/style.css">
     </head>
     <body>
-        <div class="clouds"></div>
+        <div class="clouds" aria-hidden="true"></div>
         <div class="container">
             <div class="main_window"> 
                 <header class="banner">
@@ -30,9 +30,9 @@
                 <aside class="sidebar-left">
                     <h3 class="header">> explore</h3><br> 
                     <nav>
-                    <button onclick="location.href='/'" type="button">home</button>
-                    <button onclick="location.href='/posts'" type="button">blog</button>
-                    <button onclick="location.href='/feed.xml'" type="button">feed</button>
+                        <button onclick="location.href='/'" type="button">home</button>
+                        <button onclick="location.href='/posts'" type="button">blog</button>
+                        <button onclick="location.href='/feed.xml'" type="button">feed</button>
                     </nav>
                 </aside>
             </div>

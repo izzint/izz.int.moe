@@ -2,11 +2,10 @@ import { DateTime } from "luxon";
 import { compileString } from "sass";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
-export default async function(eleventyConifg) {
-    eleventyConifg.addPassthroughCopy({"src/static": "/" });
+export default async function (eleventyConifg) {
+    eleventyConifg.addPassthroughCopy({ "src/static": "/" });
 
     eleventyConifg.addTemplateFormats("scss");
-
     eleventyConifg.addExtension("scss", {
         outputFileExtension: "css",
 
@@ -27,10 +26,9 @@ export default async function(eleventyConifg) {
         return DateTime.fromJSDate(date).toRFC2822();
     });
 
-    eleventyConifg.addShortcode("rssBuildDate", function() {
+    eleventyConifg.addShortcode("rssBuildDate", function () {
         return DateTime.now().toRFC2822();
-    })
-
+    });
 
     eleventyConifg.addFilter("enshorten", (what) => {
         var shortend = what.trim()
